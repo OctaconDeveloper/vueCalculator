@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            A simple Vue Calculator
+        </title>
+        <link href="bulma.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="container is-fluid" style="margin:10px;">
+            <div id="root">
+                <octacondeveloper-title></octacondeveloper-title> 
+                <div class="row">
+                    <div class="box is-medium is-boxed" style="float: left">
+                        <octacondeveloper-button @click.native="lis(1)">1</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="lis(2)">2</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="lis(3)">3</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="ops('*')">*</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="lis(4)">4</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="lis(5)">5</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="lis(6)">6</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="ops('/')">/</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="lis(7)">7</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="lis(8)">8</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="lis(9)">9</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="ops('%')">%</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="lis(0)">0</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="lis('.')">.</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="del">C</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="ops('+')">+</octacondeveloper-button>
+                        <octacondeveloper-button disabled>... </octacondeveloper-button>
+                        <octacondeveloper-button @click.native="cls()">CA</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="ops('-')">-</octacondeveloper-button>
+                        <octacondeveloper-button @click.native="calculate()">=</octacondeveloper-button>
+                    </div>
+                    <div class="box is-medium is-boxed"  style="float: right">
+                        <div class="d1">
+                            {{first}}
+                        </div>
+                        <div class="d1">
+                            {{operator}}
+                        </div>
+                        <div class="d1">
+                            {{second}}
+                        </div>
+                        <hr/>
+                        <div class="d2">
+                            {{result}}
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <script src="vue.js"></script>
+        <script src="app.js"></script>
+       
+        <style>
+        .box{
+            width:40%;
+            line-height: 50px;
+            align-items: center;
+            margin: 10px;
+        }
+        .button{
+            font-size: 145px;
+            height: 100px;
+            width: 100px;
+        }
+        .d1{
+            font-size: 24px;
+            font-weight: bolder;
+        }
+        .d2{
+            font-size: 34px;
+            font-weight: bolder;
+            color: green;
+            margin-top: 20px;
+
+        }
+        hr{
+            height:20px;
+        }
+        </style>
+    </body>
+</html>
